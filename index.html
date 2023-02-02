@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio de Klein Nicolas</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script type="text/javascript" src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Klein Nicolas</h1>
+        <nav>
+            <a href="#about-section">A propos de moi</a>
+            <a href="#projects-section">Mes projets</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about-section">
+            <div class="flex">
+                <div class="propos">
+                    <h2>A propos de moi</h2>
+                    <p>Je suis Klein Nicolas, un étudiant talentueux en Bachelier en Techniques de Multimédia et de
+                        l'Internet (BUT MMI). Je suis passionné par le développement web et je suis à la recherche
+                        active d'un stage ou d'une alternance pour développer mes compétences professionnelles.
+
+                        En tant qu'étudiant en MMI, j'ai acquis de solides compétences en HTML, CSS, JavaScript et PHP.
+                        Je suis capable de concevoir et de développer des sites web professionnels, attrayants et
+                        fonctionnels. Je suis également capable de travailler avec des frameworks tels que Bootstrap et
+                        de travailler avec des bases de données pour créer des applications web dynamiques.
+                    </p>
+                    <p>Je suis convaincu que mon éducation solide en développement web, combinée à ma passion pour la
+                        programmation et mon désir de me développer en tant que développeur, font de moi un candidat
+                        idéal pour un stage ou une alternance. Je suis déterminé à utiliser cette opportunité pour
+                        démontrer mon potentiel et à développer mes compétences afin d'atteindre mes objectifs
+                        professionnels à long terme.</p>
+                </div>
+                <div class="moi">
+                    <img src="./images/subject.png" alt="Nicolas">
+                </div>
+            </div>
+        </section>
+
+        <section id="projects-section">
+            <h2>Mes projets</h2>
+            <ul>
+                <li>
+                    <h3>SAE 203 Projet étudiant</h3>
+                    <a href="https://sae203.kleini.etu.mmi-unistra.fr/" target="_blank">Best Manga</a>
+                    <p>Description du projet n°1</p>
+                </li>
+                <li>
+                    <h3>Site article créé à partir d'un CMS Pour le Cuej</h3>
+                    <a href="https://www.cuej.info/mini-sites/animaux/www/index.php" target="_blank">Les Bêtes en
+                        nous</a>
+                    <p>Description du projet n°2</p>
+                </li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Me contacter</h2>
+            <form action="mailto:nicolas.klein67120@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name">
+                <br><br>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email">
+                <br><br>
+                <label for="message">Message :</label>
+                <textarea id="message" name="message"></textarea>
+                <br><br>
+                <input type="submit" value="Envoyer">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; Klein Nicolas 2023</p>
+    </footer>
+</body>
+
+</html>
