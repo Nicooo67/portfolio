@@ -1,16 +1,17 @@
-// Référence aux sections
-const aboutSection = document.querySelector("#about-section");
-const projectsSection = document.querySelector("#projects-section");
+// Récupérer la section de projet
+var projectSection = document.querySelector(".project-section");
 
-// Afficher les sections avec une animation
-setTimeout(function() {
-  aboutSection.classList.add("show");
-}, 500);
-setTimeout(function() {
-  projectsSection.classList.add("show");
-}, 1000);
+// Écouter l'événement de défilement de la fenêtre
+window.addEventListener("scroll", function () {
+  // Récupérer la position de la section de projet
+  var projectSectionRect = projectSection.getBoundingClientRect();
 
-window.addEventListener("scroll", function() {
-    let header = document.querySelector("header");
-    header.classList.toggle("sticky", window.scrollY > 0);
-  });
+  // Vérifier si la section de projet est visible dans la vue
+  if (projectSectionRect.top < window.innerHeight && projectSectionRect.bottom >= 0) {
+    // Ajouter la classe d'animation à chaque élément de projet
+    var projectItems = projectSection.querySelectorAll(".project-item");
+    projectItems.forEach(function (item) {
+      item.classList.add("animated", "fadeInUp");
+    });
+  }
+});
