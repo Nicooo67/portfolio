@@ -514,6 +514,46 @@ textarea {
   }
   
 
+  /* Styles pour le bloc de contact */
+#contact-section {
+  background-color: #f7f7f7;
+  padding: 60px 0;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.email {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #444;
+  text-decoration: none;
+  border: 2px solid #444;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.email:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+
   
   /* Pour les écrans moyens et grands */
   @media (min-width: 768px) {
@@ -596,6 +636,25 @@ textarea {
     }
   }
   
+  /* Responsive */
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .email {
+    font-size: 20px;
+    padding: 8px 16px;
+    border-radius: 5px;
+  }
+}
+
+  
 
   /* pour les écrans plus petits que 600px de large */
 @media only screen and (max-width: 600px) {
@@ -615,4 +674,6 @@ textarea {
       width: 100%;
     }
   }
+
+
   
