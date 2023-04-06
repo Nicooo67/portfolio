@@ -1,0 +1,10 @@
+---
+const { as } = Astro.props;
+---
+
+<a
+  href={`#${as}`}
+  class="inline-block text-sm btn-shadow rounded-xl bg-[#F1F1F1] px-12 py-4 sm:text-base"
+>
+  <slot />
+</a>

@@ -1,0 +1,7 @@
+---
+const { extraClasses } = Astro.props;
+---
+
+<p class={`text-sm font-light sm:text-base ${extraClasses}`}>
+  <slot />
+</p>

@@ -1,0 +1,27 @@
+---
+import SectionLayout from "../layouts/SectionLayout.astro";
+import Buttons from "./Buttons.astro";
+import Title from "./Title.astro";
+
+import IconEmail from "../images/icon-email.svg";
+---
+
+<SectionLayout id="contact">
+  <article
+    class="flex flex-col items-center section-shadow rounded-xl p-5 md:p-12"
+  >
+    <Title extraClasses="text-center text-lg md:text-4xl">
+      Vous cherchez un développeur web frontend ? <br />Contactez-moi ✉️
+    </Title>
+
+    <a
+      class="inline-flex gap-6 btn-shadow rounded-xl bg-[#F1F1F1] px-6 py-4"
+      href="mailto:nicolas.klein67120@gmail.com"
+    >
+      <img class="hidden md:block" src={IconEmail} alt="icon email" />
+      <span class="text-sm text-[#808080] sm:text-base"
+        >nicolas.klein67120@gmail.com</span
+      >
+    </a>
+  </article>
+</SectionLayout>

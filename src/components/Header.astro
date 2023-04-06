@@ -1,0 +1,34 @@
+---
+import Avatar from "../images/nicolas-klein-avatar.png";
+import Buttons from "./Buttons.astro";
+import Text from "./Text.astro";
+---
+
+<header
+  class="flex items-center gap-y-12 flex-wrap justify-between container py-12"
+>
+  <article class="md:w-6/12">
+    <h1 class="text-4xl font-medium sm:text-5xl md:text-6xl">
+      Nicolas Klein, Développeur web frontend 🚀
+    </h1>
+    <Text extraClasses="my-6">
+      Je suis Klein Nicolas, un étudiant motivé en Bachelier Techniques de
+      Multimédia et de l'Internet (BUT MMI). Je suis passionné par le
+      développement web et je suis à la recherche active d'un stage ou d'une
+      alternance pour développer mes compétences professionnelles.
+    </Text>
+    <div class="flex flex-wrap gap-4">
+      <Buttons as="projects">Voir mes projets</Buttons>
+      <Buttons as="contact">Contact</Buttons>
+    </div>
+  </article>
+
+  <div style={{ backgroundImage: `url(${Avatar})` }} class="md:w-6/12 shape">
+    <div
+      style={{ backgroundImage: `url(${Avatar})` }}
+      class="h-full w-full bg-url"
+    >
+      f
+    </div>
+  </div>
+</header>

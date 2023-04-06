@@ -1,0 +1,7 @@
+---
+const { extraClasses } = Astro.props;
+---
+
+<h2 class={`text-4xl font-normal mb-6 md:mb-12 md:text-5xl ${extraClasses}`}>
+  <slot />
+</h2>

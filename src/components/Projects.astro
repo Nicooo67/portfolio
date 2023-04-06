@@ -1,0 +1,25 @@
+---
+import SectionLayout from "../layouts/SectionLayout.astro";
+import Project from "./Project.astro";
+import Title from "./Title.astro";
+
+import CUEJ from "../images/cuej.png";
+import SAE from "../images/sae-project.png";
+---
+
+<SectionLayout padding="50px 0 120px" id="projects">
+  <Title>Mes projets 🧑‍💻</Title>
+
+  <div class="flex flex-col gap-y-12">
+    <Project
+      title="Projet étudiant au Cuej : Nos amis les bêtes"
+      imageSrc={CUEJ}
+      description="Ce projet étudiant impliquait la création d'un site d'articles pour le Centre Universitaire d'Enseignement du Journalisme (CUEJ), permettant aux étudiants de publier des articles en utilisant un CMS conçu par l'équipe."
+    />
+    <Project
+      title="Projet étudiant SAE 203 : BestManga"
+      imageSrc={SAE}
+      description="Ce projet étudiant avait pour but de développer un site web avec des articles captivants et des animations CSS pour améliorer l'expérience utilisateur. Le site incluait une base de données complexe avec des relations entre les tables pour une gestion efficace."
+    />
+  </div>
+</SectionLayout>
