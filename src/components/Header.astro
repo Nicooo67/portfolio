@@ -1,11 +1,12 @@
 ---
-import Avatar from "../images/nicolas-klein-avatar.png";
+import { Image } from "@astrojs/image/components";
+import Avatar from "../images/avatar.png";
 import Buttons from "./Buttons.astro";
 import Text from "./Text.astro";
 ---
 
 <header
-  class="flex items-center gap-y-12 flex-wrap justify-between container py-12"
+  class="flex items-center gap-y-12 flex-col justify-between container py-12 md:flex-row"
 >
   <article class="md:w-6/12">
     <h1 class="text-4xl font-medium sm:text-5xl md:text-6xl">
@@ -23,12 +24,20 @@ import Text from "./Text.astro";
     </div>
   </article>
 
-  <div style={{ backgroundImage: `url(${Avatar})` }} class="md:w-6/12 shape">
-    <div
-      style={{ backgroundImage: `url(${Avatar})` }}
-      class="h-full w-full bg-url"
-    >
-      f
-    </div>
+  <div class="flex items-center justify-center w-full md:w-auto">
+    <Image
+      src={Avatar}
+      width={482}
+      height={511}
+      class:list={[
+        "rounded-full",
+        "mx-auto",
+        "hover:-translate-y-[10px]",
+        "transition",
+        "duration-500",
+        "cursor-pointer",
+      ]}
+      alt="photo de Nicolas Klein"
+    />
   </div>
 </header>

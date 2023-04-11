@@ -1,6 +1,6 @@
-<nav class="">
+<nav class="navbar fixed top-0 left-0 right-0 w-full z-[10] transition">
   <div class="flex items-center justify-between h-[72px] container">
-    <h1 class="font-bold text-3xl">KN.</h1>
+    <a href="#" class="font-bold text-3xl">KN.</a>
 
     <ul class="hidden md:flex gap-6">
       <li><a href="#">Home</a></li>
@@ -8,5 +8,76 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
+    <button
+      aria-labelledby="burger-menu-label"
+      class="md:hidden flex flex-col gap-1"
+      id="burger-menu"
+      onclick="toggleMenu()"
+    >
+      <span class="w-8 h-1 bg-black"></span>
+      <span class="w-8 h-1 bg-black"></span>
+      <span class="w-8 h-1 bg-black"></span>
+    </button>
+
+    <div
+      id="mobile-menu"
+      class="fixed top-[72px] left-0 right-0 bg-white hidden md:hidden transition-all duration-300"
+    >
+      <ul class="flex flex-col gap-6 p-6">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
+
+<script>
+  const btnMenu = document.getElementById("burger-menu");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  function toggleMenu() {
+    mobileMenu.classList.toggle("menu-active");
+
+    if (mobileMenu.classList.contains("menu-active")) {
+      document.querySelector(".navbar").classList.add("nav-active");
+    } else if (window.scrollY < 20) {
+      document.querySelector(".navbar").classList.remove("nav-active");
+    }
+
+    const items = document.querySelectorAll("#mobile-menu li a");
+    items.forEach((item) => {
+      item.addEventListener("click", () => {
+        mobileMenu.classList.remove("menu-active");
+        document.querySelector(".navbar").classList.remove("nav-active");
+      });
+    });
+  }
+
+  btnMenu.addEventListener("click", () => {
+    toggleMenu();
+  });
+
+  function toggleClassListOfNavBarWhenScrool() {
+    if (
+      window.scrollY > 20 ||
+      document.getElementById("mobile-menu").classList.contains("menu-active")
+    ) {
+      document.querySelector(".navbar").classList.add("nav-active");
+    } else {
+      document.querySelector(".navbar").classList.remove("nav-active");
+    }
+  }
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+      mobileMenu.classList.remove("menu-active");
+    }
+  });
+
+  window.addEventListener("scroll", () => {
+    toggleClassListOfNavBarWhenScrool();
+  });
+</script>

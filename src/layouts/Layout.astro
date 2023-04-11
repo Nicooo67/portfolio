@@ -2,7 +2,7 @@
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 const { pageTitle } = Astro.props;
-import '../styles/global.css';
+import "../styles/global.css";
 ---
 
 <html lang="fr">
@@ -10,8 +10,13 @@ import '../styles/global.css';
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
+    <title>Nicolas Klein - Développeur web frontend</title>
     <meta name="generator" content={Astro.generator} />
-    <title>Nicolas Klein - {pageTitle}</title>
+    <meta name="title" content="Nicolas Klein - Développeur web frontend" />
+    <meta
+      name="description"
+      content="Je suis Klein Nicolas, un étudiant motivé en Bachelier Techniques de Multimédia et de l'Internet (BUT MMI). Je suis passionné par le développement web particulièrement par le frontend"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,7 +26,9 @@ import '../styles/global.css';
   </head>
   <body class="bg-lightWith">
     <Nav />
-    <slot />
-    <Footer />
+    <div class="mt-[72px]">
+      <slot />
+      <Footer />
+    </div>
   </body>
 </html>
