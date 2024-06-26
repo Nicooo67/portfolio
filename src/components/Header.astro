@@ -6,38 +6,37 @@ import Text from "./Text.astro";
 ---
 
 <header
-  class="flex items-center gap-y-12 flex-col justify-between container py-12 md:flex-row"
+	class="flex items-center gap-y-12 flex-col justify-between container py-12 md:flex-row"
 >
-  <article class="md:w-6/12">
-    <h1 class="text-4xl font-medium sm:text-5xl md:text-6xl">
-      Nicolas Klein, Développeur web frontend 🚀
-    </h1>
-    <Text extraClasses="my-6">
-      Je suis Klein Nicolas, un étudiant motivé en Bachelier Techniques de
-      Multimédia et de l'Internet (BUT MMI). Je suis passionné par le
-      développement web et je suis à la recherche active d'un stage ou d'une
-      alternance pour développer mes compétences professionnelles.
-    </Text>
-    <div class="flex flex-wrap gap-4">
-      <Buttons as="projects">Voir mes projets</Buttons>
-      <Buttons as="contact">Contact</Buttons>
-    </div>
-  </article>
+	<article class="md:w-6/12">
+		<h1 class="text-4xl font-medium sm:text-5xl md:text-6xl">
+			Nicolas Klein, Développeur web Full-stack 🚀
+		</h1>
+		<Text extraClasses="my-6">
+			Je suis Klein Nicolas, un étudiant motivé en Bachelor Métiers du
+			Multimédia et de l'Internet (BUT MMI). Je suis passionné par le
+			développement web et je suis actuellement en alternance chez Atos.
+		</Text>
+		<div class="flex flex-wrap gap-4">
+			<Buttons as="projects">Voir mes projets</Buttons>
+			<Buttons as="contact">Contact</Buttons>
+		</div>
+	</article>
 
-  <div class="flex items-center justify-center w-full md:w-auto">
-    <Image
-      src={Avatar}
-      width={482}
-      height={511}
-      class:list={[
-        "rounded-full",
-        "mx-auto",
-        "hover:-translate-y-[10px]",
-        "transition",
-        "duration-500",
-        "cursor-pointer",
-      ]}
-      alt="photo de Nicolas Klein"
-    />
-  </div>
+	<div class="flex items-center justify-center w-full md:w-auto">
+		<Image
+			src={Avatar}
+			width={482}
+			height={511}
+			class:list={[
+				"rounded-full",
+				"mx-auto",
+				"hover:-translate-y-[10px]",
+				"transition",
+				"duration-500",
+				"cursor-pointer",
+			]}
+			alt="photo de Nicolas Klein"
+		/>
+	</div>
 </header>

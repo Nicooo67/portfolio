@@ -1,23 +1,21 @@
 ---
 import { Image } from "@astrojs/image/components";
 const { title, imageSrc, description, link } = Astro.props;
-import Buttons from "./Buttons.astro";
+import ButtonLink from "./ButtonLink.astro";
 ---
 
 <article
-  class="flex flex-col-reverse items-center gap-[30px] rounded-xl section-shadow p-5 md:gap-[50px] md:p-12 md:flex-row"
+	class="flex flex-col-reverse items-center gap-[30px] rounded-xl section-shadow p-5 md:gap-[50px] md:p-12 md:flex-row"
 >
-  <div class="md:w-6/12">
-    <h3 class="font-medium text-2xl">{title}</h3>
-    <div class="font-light my-6 text-sm sm:text-base">
-      <p set:html={description} />
-    </div>
-    <Buttons extraClasses="transition hover:-translate-y-[5px]">
-      Voir le projet
-    </Buttons>
-  </div>
+	<div class="md:w-6/12">
+		<h3 class="font-medium text-2xl">{title}</h3>
+		<div class="font-light my-6 text-sm sm:text-base">
+			<p set:html={description} />
+		</div>
+		<ButtonLink link={link} />
+	</div>
 
-  <div class="h-full md:w-6/12">
-    <Image src={imageSrc} alt={title} width={700} format="png" height={350} />
-  </div>
+	<div class="h-full md:w-6/12">
+		<Image src={imageSrc} alt={title} width={700} format="png" height={350} />
+	</div>
 </article>

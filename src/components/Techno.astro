@@ -1,0 +1,43 @@
+---
+import SectionLayout from "../layouts/SectionLayout.astro";
+import Title from "./Title.astro";
+
+const res = await fetch(
+	"https://portfolio-kn.000webhostapp.com/wp-json/wp/v2/technos"
+);
+const logos = await res.json();
+---
+
+<script>
+	const res = await fetch(
+		"https://portfolio-kn.000webhostapp.com/wp-json/wp/v2/technos"
+	);
+	const logos = await res.json();
+
+	console.log(logos);
+</script>
+
+<SectionLayout padding="50px 0 120px" id="technologies">
+	<Title>Mes Technologies 🛠️</Title>
+
+	<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+		{
+			logos.length === 0 ? (
+				<p>Loading...</p>
+			) : (
+				logos.map((logo) => (
+					<div class="flex flex-col items-center">
+						<div class="h-28 w-28 mb-2">
+							<img
+								src={logo.acf.logo}
+								alt={logo.title.rendered}
+								class="object-cover h-full w-full"
+							/>
+						</div>
+						<span class="text-center">{logo.title.rendered}</span>
+					</div>
+				))
+			)
+		}
+	</div>
+</SectionLayout>

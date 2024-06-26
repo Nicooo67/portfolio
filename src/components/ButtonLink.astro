@@ -1,0 +1,10 @@
+---
+const { link, extraClasses = "" } = Astro.props;
+---
+
+<a
+	href={link}
+	class={`inline-block text-sm btn-shadow rounded-xl bg-[#F1F1F1] px-12 py-4 transition hover:-translate-y-[5px] sm:text-base ${extraClasses}`}
+>
+	Voir le projet
+</a>
